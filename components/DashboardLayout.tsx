@@ -1,8 +1,8 @@
 'use client';
 import { useState } from 'react';
-import Sidebar from './Sidebar';
-import Header from './Header';
 import Footer from './Footer';
+import Header from './Header';
+import Sidebar from './Sidebar';
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
@@ -11,7 +11,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   const [openDropdown, setOpenDropdown] = useState(false);
   const [isSheetOpen, setIsSheetOpen] = useState(false);
 
-    // const navLinks = [
+  // const navLinks = [
   //   { label: 'Label 1' },
   //   {
   //     navItem: 'Dashboard',
@@ -71,7 +71,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     <div className="flex">
       <Sidebar isSidebarCollapsed={isSidebarCollapsed} setIsSidebarCollapsed={setIsSidebarCollapsed} onHoverSidebarCollapsed={onHoverSidebarCollapsed} setOnHoverSidebarCollapsed={setOnHoverSidebarCollapsed} onHoverOpenDropdown={onHoverOpenDropdown} setOnHoverOpenDropdown={setOnHoverOpenDropdown} openDropdown={openDropdown} setOpenDropdown={setOpenDropdown} isSheetOpen={isSheetOpen} setIsSheetOpen={setIsSheetOpen} />
 
-      <div className={`${isSidebarCollapsed ? 'xl:ml-[96px]' : 'xl:ml-[272px]'} w-full transition-margin duration-300`}>
+      <div className={`${isSidebarCollapsed ? 'xl:ml-[72px]' : 'xl:ml-[268px]'} w-full transition-margin duration-300`}>
         <div className="flex flex-col justify-between w-full min-h-svh">
           <Header isSidebarCollapsed={isSidebarCollapsed} setIsSidebarCollapsed={setIsSidebarCollapsed} onHoverOpenDropdown={onHoverOpenDropdown} setOpenDropdown={setOpenDropdown} isSheetOpen={isSheetOpen} setIsSheetOpen={setIsSheetOpen} />
           <main className="flex-1 sm:mt-6 mt-3 overflow-y-auto sm:px-6 px-3">{children}</main>

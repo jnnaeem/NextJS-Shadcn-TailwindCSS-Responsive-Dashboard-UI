@@ -13,8 +13,8 @@ interface HeaderProps {
 
 export default function Header({ isSidebarCollapsed, setIsSidebarCollapsed, onHoverOpenDropdown, setOpenDropdown, isSheetOpen, setIsSheetOpen }: HeaderProps) {
   return (
-    <header className="sm:pt-6 pt-3 sm:px-6 px-3 backdrop-blur rounded-b-md w-full sticky top-0 z-50">
-      <div className="bg-card w-full py-4 sm:px-6 px-3 rounded-md border border-default shadow-md">
+    <header className="w-full sticky top-0 z-50">
+      <div className="bg-card w-full py-4 sm:px-6 px-3 border-b border-default shadow-md">
         <div className="flex justify-between items-center gap-5">
           <div>
             <button

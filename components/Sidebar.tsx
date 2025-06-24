@@ -93,7 +93,7 @@ export default function Sidebar({ isSidebarCollapsed, setIsSidebarCollapsed, onH
     <>
       {/* Sidebar at XL device */}
       <aside
-        className="xl:block hidden fixed top-0 bottom-0 sm:py-6 py-3 sm:pl-6 pl-3"
+        className="xl:block hidden fixed top-0 bottom-0"
         onMouseEnter={() => {
           if (isSidebarCollapsed && !onHoverSidebarCollapsed) {
             setIsSidebarCollapsed(false);
@@ -109,9 +109,9 @@ export default function Sidebar({ isSidebarCollapsed, setIsSidebarCollapsed, onH
           }
         }}
       >
-        <div className={`${isSidebarCollapsed ? 'xl:w-[72px]' : 'xl:w-[248px]'} h-full border-r border-default rounded-md overflow-hidden flex flex-col bg-card transition-width duration-300`}>
+        <div className={`${isSidebarCollapsed ? 'xl:w-[72px]' : 'xl:w-[268px]'} h-full border-r border-default overflow-hidden flex flex-col bg-card transition-width duration-300`}>
           {/* Logo */}
-          <div className="p-4 border-b border-default">
+          <div className="p-4">
             <div className={`${isSidebarCollapsed ? 'block' : 'hidden'}`}>Fav</div>
             <div className={`${isSidebarCollapsed ? 'hidden' : 'block'}`}>Logo</div>
           </div>
